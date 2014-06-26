@@ -6,12 +6,6 @@ Overview
 
 This page will introduce users to transferring files using HTCondor's built-in transfer mechanisms.  HTCondor has a built-in mechanism to transfer binaries and files to and from compute nodes.  If users have relatively small amounts of data and binaries to transfer (<100MB) or needs to do ad-hoc job submissions, then this mechanism can be effective.
 
-Conventions
------------
-    *In the examples used on this page, text in red is being used as a placeholder and will need to be replaced with user specific information (e.g. username )
-    *Names of servers are denoted using blue text (e.g. login01.osgconnect.org)
-    *Directory or file names are denoted using green text (e.g. ~/my_file)
-
 Preliminaries
 -------------
 Before getting started, users should login to login01.osgconnect.org and get a copy of the tutorial files:
