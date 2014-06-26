@@ -4,7 +4,7 @@ OSG Connect Tutorial: Transferring data with HTCondor
 Overview
 --------
 
-This page will introduce users to transferring files using HTCondor's built-in transfer mechanisms.  HTCondor has a built-in mechanism to transfer binaries and files to and from compute nodes.  If users have relatively small amounts of data and binaries to transfer (<100MB) or needs to do ad-hoc job submissions, then this mechanism can be effective.
+This page will introduce users to transferring files using HTCondor's built-in transfer mechanisms.  HTCondor has a built-in mechanism to transfer binaries and files to and from compute nodes.  If users have relatively small amounts of data and binaries to transfer (<100MB) or need to do ad-hoc job submissions, then this mechanism can be effective.
 
 Preliminaries
 -------------
@@ -32,9 +32,9 @@ when_to_transfer_output = ON_EXIT
  
 queue 50
 ```
-The key parts of the submit file are the transfer_input_files parameter that gives a comma separated list of paths to the files that will be transferred.  In addition, ShouldTransferFiles needs to be set to YES and when_to_transfer_output needs to be set to ON_EXIT in order to make sure that the HTCondor will return the output.
+The key parts of the submit file are under the transfer_input_files parameter that gives a comma separated list of paths to the files that will be transferred.  In addition, ShouldTransferFiles needs to be set to YES and when_to_transfer_output needs to be set to ON_EXIT in order to make sure that the HTCondor will return the output.
 
-Finally, change submit file to by replacing PROJECT_NAME with the appropriate value before submitting the file:
+Finally, change the submit file by replacing PROJECT_NAME with the appropriate value before submitting the file:
 
 **path warning:** You must run condor_submit in the same directory that you created the files and directories in. Otherwise HTCondor will give you an error due to not being able to find the distribution and random_words files
 
