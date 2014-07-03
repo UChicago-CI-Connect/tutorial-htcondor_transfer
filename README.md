@@ -24,7 +24,6 @@ executable = app_script.sh
 output = logs/transfer.out.$(Process)
 error = logs/transfer.err.$(Process)
 log = logs/transfer.log
-+ProjectName = "ConnectTrain"
  
 transfer_input_files = distribution, random_words
 ShouldTransferFiles = YES
@@ -33,8 +32,6 @@ when_to_transfer_output = ON_EXIT
 queue 50
 ```
 The key parts of the submit file are under the transfer_input_files parameter that gives a comma separated list of paths to the files that will be transferred.  In addition, ShouldTransferFiles needs to be set to YES and when_to_transfer_output needs to be set to ON_EXIT in order to make sure that the HTCondor will return the output.
-
-Finally, change the submit file by replacing PROJECT_NAME with the appropriate value before submitting the file:
 
 **path warning:** You must run condor_submit in the same directory that you created the files and directories in. Otherwise HTCondor will give you an error due to not being able to find the distribution and random_words files
 
